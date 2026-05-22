@@ -1,0 +1,4 @@
+﻿1	Gain access to your base.
+2	Base secured.
+3	Wipe out the enemy forces.
+4	Enemy forces defeated.
