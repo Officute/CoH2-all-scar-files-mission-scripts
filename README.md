@@ -1,1 +1,1 @@
-# CoH2-all-scar-files-mission-scripts
+This are all the CoH2 Soviets & US Forces campaigns, ToW, and custom mission scripts, i upload this for testing for AI programs such as ChatGPT, Google Gemini, Grok, and etc to know better the .scar codes.
