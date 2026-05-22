@@ -1,0 +1,470 @@
+﻿1	[USF] Village Expedition (1944)
+2	It's no longer summer but fall, still the United States Forces fight on in the French countryside, trying to dislodge the Germans from every house and street corner.
+3	Dog Company
+4	Wehrmacht
+5	You can not request any new units
+6	Reinforcement are incoming
+7	Conditions:
+8	Have at least one unit stay alive
+9	Defend Patrol
+10	Defend the vehicle crews
+11	Locate hidden Tiger tank
+12	Village Control
+13	Capture the Bridgehead
+14	Bridgehead
+15	Capture northern part of the village
+16	Northern Village
+17	Clear Buildings
+18	Clear Building
+19	Repair Progress
+20	Destroy the hidden Tiger tank
+21	Destroy
+22	Escort convoy
+23	Escort
+24	Convoy health
+25	Breakthrough
+26	Capture the Stronghold
+27	Capture
+28	Secure the other side of the river
+29	Cross to this point
+30	Destroy Tiger tank
+31	Destroy Tank
+32	Repair Bridge
+33	Engineers
+34	Bridge
+35	Clear path for convoy
+36	Clear the area of enemy units
+37	Victory!
+38	Defeat...
+39	Riflemen unlocked!
+40	M4A3 Sherman unlocked!
+41	Command wants this village secured
+42	Unfortunately our tanks broke down yesterday and we had to set up a defensive line
+43	The Germans know we are here and we are expecting an attack
+44	Form a defensive line behind the sandbags and hold the position until the tanks have been repaired
+45	Damn Germans are using artillery!
+46	Fall back!
+47	Haha! The're bombing themselves!
+48	The tanks have been repaired!
+49	You must protect the convoy at all costs
+50	Follow it and make sure it doesn't get destroyed
+51	You hear that?
+52	Looks like the Germans are dug in deep
+53	Better clear each house to be safe
+54	Boyah!
+55	Friendly aircraft incoming for reconnaissance of the area
+56	We'll take it from here
+57	If they're as well dug in here as they were in the north we better call in more reserves.
+58	The convoy must not take any damage!
+59	Almost there
+60	All we got to do is cross this bridge
+61	They blew the bridge!
+62	This area is not secure, we must repair the stone bridge in the north
+63	Germans are all over the place
+64	Prepare to fight, they won't let us repair the bridge that easily
+65	Enemy aircraft!
+66	Sh*t!
+67	They got the half-track, luckily they didn't get the engineers
+68	I want a pay raise after this!
+69	Done repairing this stupid bridge
+70	Get your units across the bridge and clear them out before we lose any more of this convoy.
+71	Convoy vehicle down!
+72	So much for the village...
+73	Stug!
+74	Entrenched Stug!
+75	Panther tank!
+76	They've got my engine!
+77	[SOV] Kursk (1943)
+78	The year is 1943 and the end of the great tank battle known as Kursk is nearing its end. Elements of the 3rd Guards army is pushing north in an effort to force the Germans out out of a small village. It's been raining the for days and made the ground muddy. While the Tanks were on an patrol they lost radio contact with headquarters. Fuel and ammunition is running low as they're spending it on defending their position.
+79	I will not lie to you comrades.
+80	We're stuck in this village, and the Germans are everywhere.
+81	There's a radio station to the north of our position.
+82	Take some tanks and go capture it, but keep an eye out, the German zoo is here.
+83	Panthers, Tigers and Elefants, but it's better than fighting the rats in the trenches.
+84	The German crews are not used to these tanks and will be inexperienced. Unless it's a Panzer IV, they've had enough time to learn how to operate those.
+85	Capture the radio and call for help.
+86	We do not have a lot of fuel left so try not to move too much!
+87	Fuel Remaining
+88	3rd Guards Army
+89	Do not waste fuel
+90	Our tank is out of fuel!
+91	Out of Fuel!
+92	Capture Radio Station
+93	Main Objective:
+94	Radio Station
+95	Low on fuel!
+96	Comrade Commissar!
+97	We've made contact with headquarters!
+98	Commissar!
+99	We've spotted a large amount of German activity in your sector.
+100	We're sending reinforcements, but it'll take some time for them to arrive.
+101	Try to hold out
+102	Commissar, our fuel reserves are low...
+103	Pull back to the repair bay and get some fuel on those T-34's.
+104	Set up defences!
+105	Defend the repair bay
+106	You can refuel and get repairs at the repair bay
+107	New T-34/76 ready for orders
+108	Until Reinforcements and Fuel
+109	While we were defending ourselves they recaptured the radio.
+110	Quickly! recapture it before our reinforcements run into an ambush!
+111	Re-capture the radio station
+112	Capture before soviet reinforcements arrive.
+113	Yuri, Pores and Lestak, take your tanks and secure that village
+114	We lost contact with the elements of the units here, so the Germans might have prepared an ambush for us.
+115	Comrades!
+116	You're alive and hopefully prepared for a fight.
+117	Give us some fuel and we can do anything for you.
+118	Fuel you shall have. Already sending vehicles with fuel.
+119	We've broken some of their lines to the east, HQ expects the remains to come our way.
+120	We're under strict orders to not let any of them escape, if we fail, we WILL be shot. 
+121	Disrupt German convoy
+122	Locate and destroy all hidden German tanks
+123	A vehicle is running low on fuel!
+124	To call in conscripts you must select a tank they should attach themselves to.
+125	One of your vehicles is running low on fuel, send it back to the repair bay for repairs and fuel
+126	Fuel is low
+127	This tank is already being supported by conscripts
+128	Can only attach to player squads
+129	+5 fuel
+130	+10 fuel
+131	+15 fuel
+132	+20 fuel
+133	+30 fuel
+134	+1 Reinforcement
+135	[WEHR] Outskirts of Berlin (1945)
+136	The last days of the Third Reich have begun. The Soviet armies are closing in on Berlin, Hitler desperately waits for reinforcements from the western front to relieve him from the inevitable defeat that is to come. This is the last stand before the Allies can claim victory. How long can the remains of the German defenders last against their overwhelming opponents?
+137	Fight to the last man
+138	Hold the line for as long as possible
+139	This is it...
+140	We are the last line before the Soviets can walk in our city.
+141	Grab what you can from the supply depots, while you still can...
+142 We can only request reinforcements at night...
+143	The once great Luftwaffe cannot support us anymore.
+144	We've been ordered to fight to the last man, and we will do so, for the Fatherland!
+145	We can soon call in more reinforcements
+146	The Soviet air force cannot scramble it's planes at night
+147	It's turning night
+148	Night will soon be upon us, Excellent work!
+149	We will soon be in the crosshairs of the Soviet air force
+150	It's turning day
+151	Now we can see what we're shooting at!
+152	Another day in the defence of the Fatherland.
+153	The German convoy will pass through here
+154	You can capture points using this!
+155	We're ready to fight for the Fatherland.
+156	Tiger tank is moving in the night.
+157	Where's the damn Panzerfaust?
+158	A Tiger tank is rolling your way...
+159	Train Station
+160	Soviet Commissar! Take him out with a sniper!
+161	Do not let any soviet unit pass
+162	It's been a tough fight, but you've been able to hold them off for %1AMOUNT% days
+163	Get down!
+164	Incoming!
+165	Aircraft!
+166	Soviet aircraft!
+167	It's been a tough fight, but you have managed to hold them off for %1AMOUNT% days.
+168	But in the end they managed to break through our lines
+169	But they've managed to kill the last men standing.
+170	See it as a victory - the war is over for you, I just hope enough civilians evacuated safely from Berlin.
+171	[WEHR-COOP] Outskirts of Berlin (1945)
+172	Custom mission by CoDiEx
+173	[OKW] Ardennes breakthrough (1944)
+174	In a last attempt to win the war the German army launches a massive surprise attack on the weakly defended lines of the Ardennes forest. German high command have chosen this territory as the weak spot, where the American worn out veterans and new recruits are. The main task for the Germans is to break through the Allied lines before they run out of fuel and ammuniton, the war's progression has taken a toll on the once great German Army's reserves, the faster the German task force is, the less enemies they are bound to come into contact with.
+175	Last time I was in the Ardennes was in 1940 when we were breaking through the French lines.
+176	Didn't expect to ever come here again, especially in the winter.
+177	We've been tasked with capturing this town and opening a road through it for our heavy tanks.
+178	We can't call in reinforcements until we have captured the other side of the river.
+179	Keep the bridges intact, if you fail to do so, our mission will be a failure.
+180	The Americans will most likely try to blow the bridges when they realise that we are here.
+181	Secure Bridgehead
+182	Excellent work, you've gained a bridgehead with this small task force.
+183	You can now choose
+184	A) Frontal attack on the city
+185	B) Surround the city
+186	Secure city (flank or frontal)
+187	Capture
+188	Bridges must remain intact
+189	American Alert level
+190	They know something is up.
+191	They're beginning to pull out
+192	The army units are being replaced by the 101st Airborne Division
+193	Defend bridge
+194	Capture bridge
+195	They've blown the bridges!
+196	The entire operation has failed!
+197	Secondary Objectives:
+198	Block American reinforcements
+199	Locate and kill American Major
+200	Locate and kill American Captain
+201	Some of the POWs we've taken say there are high ranked officers inside the city
+202	Take them out, but be careful, if they're alarmed they'll try and call in reinforcements!
+203	Take out the Captain
+204	Take out the Major
+205	Excellent work!
+206	Our heavy tanks can now push through this city and link up with the rest of our forces, to Victory kamaraden!
+207	[OKW-COOP] Ardennes Breakthrough (1944)
+208	Custom mission by CoDiEx
+209	5th Panzer Army
+210	47th Panzer Korps
+211	4th Armoured Division
+212	101st Airborne Division
+213	They're blowing the northern bridge!
+214	They're targeting the bridge in the woods!
+215	They're going to blow the southern bridge!
+216	Get there fast!
+217	Cut-off American reinforcements
+218	We've cut-off their supplies and reinforcements
+219	Yet they've decided to fight on
+220	And have decided to surrender!
+221	[SOV] Behind Enemy Lines (1941)
+222	Due to the large successes of the German 'Blitzkrieg' the surprised Soviet Army was caught off guard and unable to even form a hasty defense. Small pockets of resistance were left behind to fight an already lost battle to try ans tall any further German reinfroces while the the remaining Soviet units have to orginize a better defensive line before launching their own counte-attack.
+223	Damn Germans have taken us by surprise!
+224	All our comrades have abandoned us.
+225	We're stuck here and we can't get away unless we want the entire German reserve army tailing us.
+226	But we're not all dead, at least not yet.
+227	Together with the local population we might be able to hinder the Germans.
+228	We have no radio connection to our comrades, but there's an radio outpost nearby we might be able to use.
+229	Keep HQ Hidden
+230	Keep Civilians safe
+231	Prevent Executions
+232	Free Prisoners
+233	Search and Destroy
+234	Find Radio Outpost
+235	Find German Camp
+236	Capture Radio Outpost
+237	Kill German Officer
+238	Ambush Convoy
+239	Panzer Breakdown
+240	Destroy Broken Panzers
+241	Where's the Army?
+242	We can find them, keep looking!
+243	6th Rifle Division (Partisan)
+244	9th Security Division
+245	Victory has been achieved in the name of the Motherland!
+246	Victory has been achieved in the name of the Fatherland!
+247	Victory has been achieved in the name of his Majesty!
+248	Victory has been achieved in the name of Uncle Sam!
+249	The NKVD will be arriving shortly for your execution...
+250	You've failed the Fatherland and your soldiers...
+251	His Majesty is most disappointed in the results we've brought home...
+252	A lot of good men died today because of you...
+253	We've located the radio outpost, but it seems to be heavily defended.
+254	We've located the German camp, but it seems to be heavily defended.
+255	That's a German officer!
+256	They'll most likely know something is up by now.
+257	The Germans are sending a patrol and some pioneers to check the radio station
+258	Set up an ambush, capture anything useful they might bring.
+259	Schneller, schneller! Wir haben das Radio zu überprüfen.
+260	Die Elite ist angekommen.
+261	Defend radio from German pioneers
+262	Raus!
+263	Our comrades at the front have damaged German tanks.
+264	Unfortunately they have failed to finish them off.
+265	They're headed our way, we do not have the material to finish them off.
+266	You must steal one of their tanks when they're repairing them or capture an AT gun.
+267	[Army Korps]
+268	Blow gates to release prisoners
+269	They're transporting POWs!
+270	Quickly, you must stop the transport or kill the execution squad!
+271	[USF-COOP] D-Day (1944)
+272	Operation Overlord has begun and it's time to land on the beaches, but that is not all... When American units have landed they'll have to fight their way off the beaches into a small village heavily defended by German trench lines and bunkers. The French bocage will also be working against the Americans.
+273	When you get to the beach, don't stop!
+274	We've got to get off the beach and take down the German command bunkers.
+275	Once we've taken the beach and its defences we will be moving into the bocage.
+276	The Germans will be everywhere, so be prepared, this is going to be a tough and long day.
+277	Neutralize German HMG bunkers
+278	Neutralize German Command Bunker
+279	Keep units alive
+280	Storm the beach
+281	Get off the beach
+282	Capture the French town
+283	Fox Company
+284	Easy Company
+285	Able Company
+286	1st Ukrainian Infantry Regiment
+287	3rd Support army
+288	252nd Panzer Abteilung
+289	Well done with the bunkers!
+290	The Shermans will be arriving ashore soon.
+291	We've broken through their defences!
+292	Excellent work commander(s). It's time to get off the beach and gain a foothold.
+293	There's a French village to the south of the beach
+294	Take it before the German reinforcements arrive.
+295	Neutralize Howitzers
+296	Dammit! Germans got artillery - take it out
+297	[UKF] Dunkirk (1940)
+298	The German war machine has pushed the combined French and British forces to the shore. In an attempt to save British soldiers a huge evacuation has started. It's up to the French forces to put up a defensive line while the British are trying to escape.
+299	British Expeditionary Force
+300	French 1st Army
+301	Army Group B
+302	Army Group A
+303	Link up
+304	Find a way to the market
+305	Find Lt. Walker
+306	Stay quiet... German patrol up ahead.
+307	Take it out, then find a way into Dunkirk
+308	Aircraft! Get down!
+309	Market Path
+310	Bloody hell! Halftrack!
+311	Thanks!
+312	The Germans have been testing our defences down here
+313	Could you help us?
+314	They're going to attack again soon and we don't have enough men.
+315	Defend Position
+316	Survivors
+317	Defend Passage
+318	Just arrived?
+319	The Hun bastards have us pinned on these beaches.
+320	We're expecting at last group of soldiers to arrive soon.
+321	Unfortunately we've lost a lot of good men trying to keep the passage open.
+322	Go to the northern part of the town and help the men keep the passage open.
+323	That should be it!
+324	Morning is upon us, and the ships will be arriving soon.
+325	We don't know from where they will be attacking, and we don't have the resources to prepare.
+326	Be dynamic and ready to move to hotspots.
+327	Dynamic Defence
+328	Defend Marked Positions
+329	Defend Ruins
+330	Defend Beaches
+331	Entered safe zone!
+332	They're focusing forces on the ruins!
+333	They're focusing forces on the town entrance!
+334	They're focusing forces on the market!
+335	The Germans will be focusing forces here
+336	Jerry is retreating!
+337	But they will be back...
+338	Set up defences at the ruins
+339	They're pushing in!
+340	Form a defensive line around the beach
+341	I hope the boats will be here soon!
+342	Bloody hell! The Luftwaffe has arrived!
+343	Until boats will arrive
+344	Shit! We're on the wrong side of the river.
+345	Save Trapped Soldiers
+346	Thank you so much!
+347	We've lost control over the beach!
+348	We've lost too many men, might as well surrender...
+349	Defend Unit
+350	The Germans are focusing forces here
+351	Neutralise Pak 43 guns
+352	Destroy Pak 43 Gun
+353	[OKW] Caen Defence (1944)
+354	After many failed attempts to capture the city, the British forces have finally broken through. How long can the German elite units defend this city, when one of their best tanks have been knocked out?
+355	Retrieve King Tiger
+356	Defend HQ
+357	Let's keep this short men, we've got a King Tiger trapped in the theatre ruins.
+358	Re-crew it and bring it back before the British.\nThe British will most likely counter-attack.
+359	So be prepared for a long rainy night!
+360	Panzer Headquarters Unlocked
+361	Panzer Elite
+362	British Army
+363	British progress on King Tiger
+364	Panzer Support Weapons Unlocked
+365	Heavy Infantry Support Unlocked
+366	Heavy Panzer Support Unlocked
+367	Intel reports they've figured out half of the King Tiger
+368	Intel reports they've got the King Tiger up and running!
+369	Support King Tiger
+370	Let's get this Tank back to base!
+371	They're attacking the base!
+372	They're trying to blow the bridge!
+373	July 1944
+374	Caen, France
+375	Capture this for more units
+376	Defend Tank
+377	[USF DDAY PART 2]
+378	Able Company
+379	Baker Company
+380	Fox Company
+381	Easy Company
+382	1st Ukrainian Infantry Regiment
+383	3rd Grenadier Division
+384	252nd Panzer Abteilung
+385	Wehrmacht
+386	June 6th, 1944
+387	Normandy, France
+388	Neutralise Command Bunkers
+389	Capture Beach
+390	Neutralise Howitzers
+391	Demolition Charges
+392	Use demolition charges to blow a hole
+393	Use engineers to plant Demolition charges
+394	Next wave of reinforcements
+395	Excellent!
+396	Capture the French town up ahead.\nReinforcements will be available.
+397	Capture French Town
+398	Neutralise Heavy Weaponry
+399	Destroy Pak Gun
+400	Destroy Tiger
+401	They've got a Tiger!
+402	Get some Bazookas up here!
+403	Command Bunker
+404	Capture
+405	Destroy
+406	Neutralise Flak Guns
+407	They're reinforcing their defences!
+408	We've got to be faster!
+409	[UKF] Barrage (1944)
+410	Winter has arrived and it is time for the British to move into German territory. Unfortunately the Germans have blocked bridges and roads in an attempt to stop their advances. Artillery will turn out to be most effective in an attempt to beat the Germans.
+411	December, 1944
+412	Eastern France
+413	City Invasion
+414	Blow Obstacles
+415	Support Churchill Tanks
+416	Cross one of the bridges
+417	Artillery Fight
+418	Defend Repair Crew
+419	Clear northern city
+420	Defend Positions
+421	British 2nd Army
+422	Wehrmacht
+423	Germans blocked the road up ahead and there is no way of getting around it.
+424	Blow them so we can move up into the city!
+425	Support Churchill Tank
+426	We've blown our way through, let's move into the city.
+427	Pick-up to destroy Panzer IV
+428	Destroy Panzer IV!
+429	Panzer IV!
+430	Gather some AT weapons and take it out before we lose our tank!
+431	Panzer down!
+432	We've got this!
+433	Clear southern city
+434	Intel reports of retreating AT weaponry from the south.
+435	We're moving in with more infantry and tanks to support you.
+436	Infantry will be made available to you soon.
+437	Churchill down!
+438	You've got to take better care of these tanks!
+439	Capture Point
+440	The heavy weaponry have arrived!
+441	Southern city cleared!
+442	Cross one of the bridges and take out the northern part of the city.
+443	Back!
+444	They've got bombers our way, targeting the bridges.
+445	You can cross the bridge here
+446	Looks like the Luftwaffe got us in their sights.
+447	The repair crews will be here soon.
+448	Set-up some Bofors AA guns to protect them, while they're repairing the bridge.
+449	It might be the best to set up Bofors near the bridges.
+450	Construct Bofors AA gun.
+451	Luftwaffe bombers are closing in!
+452	Repair crews are getting ready to repair the bridge.
+453	Bridge has been repaired.
+454	And it looks like the Luftwaffe is retreating.
+455	Well done!
+456	But we are not done yet.
+457	Intel reports of a large amount of German armour moving our way.
+458	Prepare to defend our newly claimed positions.
+459	Set up Defences
+460	They've got a Jagdtiger!
+461	Destroy Jagdtiger
+462	Until the first wave will arrive.
+463	They're moving in with the heavy armour first.
+464	Do not let them destroy the bridge!
+465	Wave 1
+466	Wave 2
+467	Wave 3
+468	Wave 4
+469	Wave 5
+470	Wave 6
