@@ -47,7 +47,9 @@ local blueprints_to_delete = {
     "77af372fe79e4e1d88e9a6e0c077da0b:attacker_spawn_infantry_and_light_vehicle_in_5_minutes_setup",
     "77af372fe79e4e1d88e9a6e0c077da0b:attacker_spawn_infantry_and_vehicles_setup",
     "77af372fe79e4e1d88e9a6e0c077da0b:attacker_spawn_mortar_and_artillery_or_rocket_vehicle_setup",
-    "77af372fe79e4e1d88e9a6e0c077da0b:attacker_starting_spawn_infantry_in_5_minutes_setup"
+    "77af372fe79e4e1d88e9a6e0c077da0b:attacker_starting_spawn_infantry_in_5_minutes_setup",
+    -- UPDATE: Added missing mortar team 
+    "77af372fe79e4e1d88e9a6e0c077da0b:spawn_mortar_team_every_random_time"
 }
 
 ----------------------------------------------------------------------------------------
@@ -198,7 +200,6 @@ function Check_RadioCaptureStatus()
     end
 end
 
--- FIXED: Converted to native blueprint extraction to prevent crashes in normal gameplay
 function Delete_SpawnerEntitiesLoop()
     local found_any = false
 
@@ -212,13 +213,10 @@ function Delete_SpawnerEntitiesLoop()
                 for i = count, 1, -1 do
                     local entity = EGroup_GetSpawnedEntityAt(eg, i)
                     if entity ~= nil then
-                        -- 1. Grab the actual blueprint object first
                         local ebp = Entity_GetBlueprint(entity)
-                        -- 2. Convert the blueprint object to a string name
                         local bp_name = BP_GetName(ebp)
                         
                         for _, target_bp in ipairs(blueprints_to_delete) do
-                            -- 3. Use string.find to ensure it matches even if hidden path prefixes exist
                             if bp_name == target_bp or string.find(bp_name, target_bp, 1, true) then
                                 Entity_Destroy(entity)
                                 found_any = true
@@ -249,6 +247,28 @@ function EliminationObjective_Start()
     }
     Objective_Register(obj_kill_forces)
     Objective_Start(obj_kill_forces, true)
+
+    -- UPDATE: Zero out Manpower and Fuel for Players 3 and 4 (Current Bank + Income)
+    local p3 = World_GetPlayerAt(3)
+    local p4 = World_GetPlayerAt(4)
+
+    if p3 ~= nil then
+        -- Wipe current resources
+        Player_SetResource(p3, RT_Manpower, 0)
+        Player_SetResource(p3, RT_Fuel, 0)
+        -- Zero out resource generation multipliers
+        Modify_PlayerResourceRate(p3, RT_Manpower, 0)
+        Modify_PlayerResourceRate(p3, RT_Fuel, 0)
+    end
+
+    if p4 ~= nil then
+        -- Wipe current resources
+        Player_SetResource(p4, RT_Manpower, 0)
+        Player_SetResource(p4, RT_Fuel, 0)
+        -- Zero out resource generation multipliers
+        Modify_PlayerResourceRate(p4, RT_Manpower, 0)
+        Modify_PlayerResourceRate(p4, RT_Fuel, 0)
+    end
 
     Rule_AddInterval(Check_EnemyForcesEliminated, 1)
 end
