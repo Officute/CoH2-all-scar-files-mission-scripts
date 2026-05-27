@@ -4,4 +4,4 @@ I uploaded all files to .lua because there's no support for .scar files.
 
 I made this by AI: https://youtube.com/shorts/eTUS6Zsc5Lc?si=_kOl-GbJ65tCrisk
 
-If any AI programs still can't read this copy this sources: https://github.com/Officute/CoH2-all-scar-files-mission-scripts and https://scardoc.coh.fi/
+If any AI programs still can't read this copy this sources: https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/coh2_mission_scripts_links.txt
