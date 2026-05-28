@@ -85,7 +85,7 @@ function Mission_Start()
     end
 
     obj_destroy_bridges = {
-        Title = LOC("Destroy the two bridges"),
+        Title = "$77838f451547402c99620752cd8e4aaa:1",
         Description = LOC("Locate and destroy both the left and right bridges."),
         Type = OT_Secondary,
         Visible = true,
@@ -94,7 +94,7 @@ function Mission_Start()
     Objective_Start(obj_destroy_bridges, true)
     
     task_left_bridge = {
-        Title = LOC("Destroy the left bridge"),
+        Title = "$77838f451547402c99620752cd8e4aaa:2",
         Type = OT_Secondary, 
         Parent = obj_destroy_bridges, 
     }
@@ -102,7 +102,7 @@ function Mission_Start()
     Objective_Start(task_left_bridge, false) 
     
     task_right_bridge = {
-        Title = LOC("Destroy the right bridge"),
+        Title = "$77838f451547402c99620752cd8e4aaa:3",
         Type = OT_Secondary,
         Parent = obj_destroy_bridges,
     }
@@ -164,7 +164,7 @@ end
 
 function SecondaryObjective_Start()
     obj_secondary_vp = {
-        Title = LOC("Capture and hold the two Victory Points"),
+        Title = "$77838f451547402c99620752cd8e4aaa:4",
         Description = LOC("Capture and protect the marked victory points to secure the sector."),
         Type = OT_Secondary,
         Visible = true,
@@ -182,7 +182,7 @@ function RadioObjective_Start()
         local eg = EGroup_FromName("eg_radio")
         
         obj_capture_radio = {
-            Title = LOC("Capture the radio tower"),
+            Title = "$77838f451547402c99620752cd8e4aaa:5",
             Description = LOC("Player 1 and 2 must capture the radio tower."),
             Type = OT_Primary,
             Visible = true,
@@ -232,7 +232,7 @@ end
 
 function Display_MinimapReminderMessage()
     pcall(function()
-        Util_MissionTitle(LOC("Use the ability on the Radio Tower to reveal enemy positions on your minimap"), 1.0, 5.0)
+        Util_MissionTitle("$77838f451547402c99620752cd8e4aaa:6", 1.0, 5.0)
     end)
 end
 
@@ -275,15 +275,15 @@ end
 ----------------------------------------------------------------------------------------
 
 -- Timer Event Messages
-function Msg_Retreat2Min() Util_MissionTitle(LOC("Enemy Forces will retreat in 2 minutes"), 1.0, 5.0) end
-function Msg_Retreat1Min() Util_MissionTitle(LOC("Enemy Forces will retreat in 1 minutes"), 1.0, 5.0) end
-function Msg_RetreatNow()  Util_MissionTitle(LOC("Enemy Forces are retreating"), 1.0, 5.0) end
+function Msg_Retreat2Min() Util_MissionTitle ("$77838f451547402c99620752cd8e4aaa:8", 1.0, 5.0) end
+function Msg_Retreat1Min() Util_MissionTitle ("$77838f451547402c99620752cd8e4aaa:9", 1.0, 5.0) end
+function Msg_RetreatNow()  Util_MissionTitle ("$77838f451547402c99620752cd8e4aaa:10", 1.0, 5.0) end
 
 function EliminationObjective_Start()
     elimination_time_left = 180 
 
     obj_kill_forces = {
-        Title = LOC("Kill all the remaining enemy forces"), 
+        Title = "$77838f451547402c99620752cd8e4aaa:11",
         Description = LOC("Eliminate all surviving Player 3 and Player 4 forces on the field."),
         Type = OT_Primary,
         Visible = true,
@@ -295,7 +295,7 @@ function EliminationObjective_Start()
     Timer_Display("EliminationTimer", LOC("Time Remaining"), true)
 
     -- Trigger 3 minute warning immediately upon start
-    Util_MissionTitle(LOC("Enemy Forces will retreat in 3 minutes"), 1.0, 5.0)
+    Util_MissionTitle ("$77838f451547402c99620752cd8e4aaa:7", 1.0, 5.0)
     
     -- Schedule the exact warnings without looping spam
     Rule_AddOneShot(Msg_Retreat2Min, 60)
