@@ -1,6 +1,7 @@
--- 1. ESSENTIAL: Import the core SCAR utility and objective tracking rules
+-- 1. ESSENTIAL: Import the core SCAR utility, UI, and objective tracking rules
 import("SCARUtil.scar")
 import("Objectives.scar")
+import("ui.scar") 
 
 -- Declare the parent objective and sub-task checkboxes globally
 obj_destroy_bridges = {}
@@ -11,6 +12,12 @@ local obj_secondary_vp = nil
 -- Global variables for the Radio and Elimination Missions
 local obj_capture_radio = {}
 local obj_kill_forces = {}
+
+-- State safety flag to prevent duplicate rule registration crashes
+local is_radio_captured = false
+
+-- Variables for the integrated text timer
+local elimination_time_left = 180 -- 3 minutes in seconds
 
 -- Directly list the full blueprint names you want deleted
 local blueprints_to_delete = {
@@ -48,9 +55,25 @@ local blueprints_to_delete = {
     "77af372fe79e4e1d88e9a6e0c077da0b:attacker_spawn_infantry_and_vehicles_setup",
     "77af372fe79e4e1d88e9a6e0c077da0b:attacker_spawn_mortar_and_artillery_or_rocket_vehicle_setup",
     "77af372fe79e4e1d88e9a6e0c077da0b:attacker_starting_spawn_infantry_in_5_minutes_setup",
-    -- UPDATE: Added missing mortar team 
-    "77af372fe79e4e1d88e9a6e0c077da0b:spawn_mortar_team_every_random_time"
+    "77af372fe79e4e1d88e9a6e0c077da0b:spawn_mortar_team_every_random_time",
+    "77af372fe79e4e1d88e9a6e0c077da0b:spawn_tank_every_random_time"
 }
+
+----------------------------------------------------------------------------------------
+-- SAFE UTILITY FUNCTIONS
+----------------------------------------------------------------------------------------
+
+-- Safely fetches a marker position without risking a crash if the marker doesn't exist
+function Safe_GetMarkerPosition(marker_name)
+    local status, marker = pcall(Marker_FromName, marker_name)
+    if status and marker ~= nil then
+        local pos_status, pos = pcall(Marker_GetPosition, marker)
+        if pos_status then
+            return pos
+        end
+    end
+    return nil
+end
 
 ----------------------------------------------------------------------------------------
 -- BRIDGE OBJECTIVES SEQUENCE
@@ -118,7 +141,7 @@ end
 ----------------------------------------------------------------------------------------
 
 function Mission_InitSecondaryObjectives()
-    Rule_AddOneShot(SecondaryObjective_ExpandMap, 295)
+    Rule_AddOneShot(SecondaryObjective_ExpandMap, 299)
     Rule_AddOneShot(Evaluate_FiveMinuteCondition, 300)
 end
 
@@ -174,6 +197,8 @@ function RadioObjective_Start()
 end
 
 function Check_RadioCaptureStatus()
+    if is_radio_captured then return end
+
     if EGroup_Exists("eg_radio") then
         local eg = EGroup_FromName("eg_radio")
         
@@ -187,9 +212,14 @@ function Check_RadioCaptureStatus()
                     local p2 = World_GetPlayerAt(2)
 
                     if owner == p1 or owner == p2 then
-                        Objective_Complete(obj_capture_radio)
+                        is_radio_captured = true 
                         
-                        Rule_AddInterval(Delete_SpawnerEntitiesLoop, 1)
+                        Objective_Complete(obj_capture_radio)
+                        Rule_AddOneShot(Display_MinimapReminderMessage, 10)
+                        
+                        if not Rule_Exists(Delete_SpawnerEntitiesLoop) then
+                            Rule_AddInterval(Delete_SpawnerEntitiesLoop, 1)
+                        end
                         
                         EliminationObjective_Start()
                         Rule_RemoveMe()
@@ -198,6 +228,12 @@ function Check_RadioCaptureStatus()
             end
         end
     end
+end
+
+function Display_MinimapReminderMessage()
+    pcall(function()
+        Util_MissionTitle(LOC("Use the ability on the Radio Tower to reveal enemy positions on your minimap"), 1.0, 5.0)
+    end)
 end
 
 function Delete_SpawnerEntitiesLoop()
@@ -214,10 +250,10 @@ function Delete_SpawnerEntitiesLoop()
                     local entity = EGroup_GetSpawnedEntityAt(eg, i)
                     if entity ~= nil then
                         local ebp = Entity_GetBlueprint(entity)
-                        local bp_name = BP_GetName(ebp)
+                        local bp_name = string.lower(BP_GetName(ebp))
                         
                         for _, target_bp in ipairs(blueprints_to_delete) do
-                            if bp_name == target_bp or string.find(bp_name, target_bp, 1, true) then
+                            if bp_name == string.lower(target_bp) or string.find(bp_name, string.lower(target_bp), 1, true) then
                                 Entity_Destroy(entity)
                                 found_any = true
                                 break
@@ -238,9 +274,16 @@ end
 -- ENDGAME ELIMINATION MECHANICS
 ----------------------------------------------------------------------------------------
 
+-- Timer Event Messages
+function Msg_Retreat2Min() Util_MissionTitle(LOC("Enemy Forces will retreat in 2 minutes"), 1.0, 5.0) end
+function Msg_Retreat1Min() Util_MissionTitle(LOC("Enemy Forces will retreat in 1 minutes"), 1.0, 5.0) end
+function Msg_RetreatNow()  Util_MissionTitle(LOC("Enemy Forces are retreating"), 1.0, 5.0) end
+
 function EliminationObjective_Start()
+    elimination_time_left = 180 
+
     obj_kill_forces = {
-        Title = LOC("Kill all the remaining enemy forces"),
+        Title = LOC("Kill all the remaining enemy forces"), 
         Description = LOC("Eliminate all surviving Player 3 and Player 4 forces on the field."),
         Type = OT_Primary,
         Visible = true,
@@ -248,47 +291,85 @@ function EliminationObjective_Start()
     Objective_Register(obj_kill_forces)
     Objective_Start(obj_kill_forces, true)
 
-    -- UPDATE: Zero out Manpower and Fuel for Players 3 and 4 (Current Bank + Income)
+    Timer_Start("EliminationTimer", elimination_time_left)
+    Timer_Display("EliminationTimer", LOC("Time Remaining"), true)
+
+    -- Trigger 3 minute warning immediately upon start
+    Util_MissionTitle(LOC("Enemy Forces will retreat in 3 minutes"), 1.0, 5.0)
+    
+    -- Schedule the exact warnings without looping spam
+    Rule_AddOneShot(Msg_Retreat2Min, 60)
+    Rule_AddOneShot(Msg_Retreat1Min, 120)
+    Rule_AddOneShot(Msg_RetreatNow, 179) 
+
     local p3 = World_GetPlayerAt(3)
     local p4 = World_GetPlayerAt(4)
 
     if p3 ~= nil then
-        -- Wipe current resources
         Player_SetResource(p3, RT_Manpower, 0)
         Player_SetResource(p3, RT_Fuel, 0)
-        -- Zero out resource generation multipliers
         Modify_PlayerResourceRate(p3, RT_Manpower, 0)
         Modify_PlayerResourceRate(p3, RT_Fuel, 0)
+        Modify_PlayerResourceRate(p3, RT_Munition, 0)
     end
 
     if p4 ~= nil then
-        -- Wipe current resources
         Player_SetResource(p4, RT_Manpower, 0)
         Player_SetResource(p4, RT_Fuel, 0)
-        -- Zero out resource generation multipliers
         Modify_PlayerResourceRate(p4, RT_Manpower, 0)
         Modify_PlayerResourceRate(p4, RT_Fuel, 0)
+        Modify_PlayerResourceRate(p4, RT_Munition, 0)
     end
 
+    Rule_AddInterval(Update_EliminationTimerTextLoop, 1)
     Rule_AddInterval(Check_EnemyForcesEliminated, 1)
+end
+
+function Update_EliminationTimerTextLoop()
+    local current_rem_time = Timer_GetRemaining("EliminationTimer")
+
+    if current_rem_time <= 0 then
+        Timer_End("EliminationTimer")
+        Rule_Remove(Check_EnemyForcesEliminated)
+        Rule_RemoveMe()
+        Execute_RetreatAndVictorySequence()
+    end
 end
 
 function Check_EnemyForcesEliminated()
     local p3 = World_GetPlayerAt(3)
     local p4 = World_GetPlayerAt(4)
 
-    if Player_GetSquadCount(p3) == 0 and Player_GetSquadCount(p4) == 0 then
-        Objective_Complete(obj_kill_forces)
+    local total_enemy_squads = 0
+
+    if p3 ~= nil then total_enemy_squads = total_enemy_squads + Player_GetSquadCount(p3) end
+    if p4 ~= nil then total_enemy_squads = total_enemy_squads + Player_GetSquadCount(p4) end
+
+    if total_enemy_squads == 0 then
+        Timer_End("EliminationTimer")
         
-        Cleanup_AllObjectives()
+        if Rule_Exists(Msg_Retreat2Min) then Rule_Remove(Msg_Retreat2Min) end
+        if Rule_Exists(Msg_Retreat1Min) then Rule_Remove(Msg_Retreat1Min) end
+        if Rule_Exists(Msg_RetreatNow)  then Rule_Remove(Msg_RetreatNow) end
         
-        Rule_AddOneShot(Trigger_MatchVictory, 5)
+        Rule_Remove(Update_EliminationTimerTextLoop)
         Rule_RemoveMe()
+        Execute_RetreatAndVictorySequence()
     end
 end
 
+function Execute_RetreatAndVictorySequence()
+    -- Complete objectives and wrap up match
+    if Objective_IsStarted(obj_kill_forces) and not Objective_IsComplete(obj_kill_forces) then
+        Objective_Complete(obj_kill_forces)
+    end
+    
+    Cleanup_AllObjectives()
+    Rule_AddOneShot(Trigger_MatchVictory, 5)
+end
+
 function Cleanup_AllObjectives()
-    local objective_list = {obj_destroy_bridges, task_left_bridge, task_right_bridge, obj_secondary_vp, obj_capture_radio, obj_kill_forces}
+    local objective_list = {obj_destroy_bridges, task_left_bridge, task_right_bridge, obj_secondary_vp, obj_capture_radio}
     
     for _, obj in ipairs(objective_list) do
         if obj ~= nil and type(obj) == "table" and obj.Title ~= nil then
