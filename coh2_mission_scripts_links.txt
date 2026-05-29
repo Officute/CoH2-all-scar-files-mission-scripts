@@ -235,7 +235,7 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/volgatimberyardgerman.scar.lua
 
 = All Types (Entities, Squads, Abilities, Upgrades, and etc.) =
-https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/luaconstsauto.scar
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/luaconstsauto.scar.lua
 
 = Example Mission by Relic =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/English%20locale%20by%20example_mission.ucs.txt
