@@ -334,3 +334,11 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/uprising_core.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/uprising_offeli.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/uprising_st.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/_advcoldtech(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/_camera(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/_coldnight(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/_forcewin(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_adv_coldtech(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_heavysupport(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_kv2arena(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_mainmode(nomercymod).scar.lua
