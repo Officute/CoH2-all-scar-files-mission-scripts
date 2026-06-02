@@ -252,6 +252,9 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/sturmtiger_competition_encounters.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/sturmtiger_competition_objectives.scar.lua
 
+= AOD maps =
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_kholodnaya.scar.lua
+
 = Custom Mission Scripts by CoDiEx (Some are errors) =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/4p_semois.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/m01_american.scar.lua
