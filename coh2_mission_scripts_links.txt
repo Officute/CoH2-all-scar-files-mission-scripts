@@ -292,7 +292,7 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/op_1_obj_stuff.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/scareventsys.lua
 
-=Custom Missions by Opulent Omega=
+= Custom Missions by Opulent Omega =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/2p_ruse.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/confrontation.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/countryside.scar.lua
