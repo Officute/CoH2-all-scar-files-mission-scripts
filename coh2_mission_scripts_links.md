@@ -292,6 +292,20 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/op_1_obj_stuff.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/scareventsys.lua
 
+=Custom Missions by Opulent Omega=
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/2p_ruse.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/confrontation.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/countryside.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/last%20train%20to%20zurich.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/last_streets_of_berlin.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/lost%20in%20snow.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/midnight%20interlopers.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/normandy_defensive.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/the%20first%20few.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/the_spymaster_of_stuttgart.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/urban%20thunder.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/zero%20front%20war.scar.lua
+
 = Custom Win Conditions .scar =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/anger.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/artysiege.scar.lua
