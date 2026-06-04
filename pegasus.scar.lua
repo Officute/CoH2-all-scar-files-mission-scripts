@@ -13,6 +13,11 @@ defend_seconds_left = 1200 -- 20 minutes in seconds
 counterattack_delay = 0    -- Dynamic countdown tracker for spawning waves
 is_secondary_obj_active = false -- Safe state variable tracking objective activity
 
+-- Modifier IDs for Player 5
+p5_mp_mod = nil
+p5_mun_mod = nil
+p5_fuel_mod = nil
+
 -- -----------------------------------------------------------------------------
 -- Compatibility Layer for Custom Maps
 -- -----------------------------------------------------------------------------
@@ -42,9 +47,10 @@ function OnInit()
     end
     
     if p5 ~= nil then
-        Modify_PlayerResourceRate(p5, RT_Manpower, 0, MUT_Multiplication)
-        Modify_PlayerResourceRate(p5, RT_Munition, 0, MUT_Multiplication)
-        Modify_PlayerResourceRate(p5, RT_Fuel, 0, MUT_Multiplication)
+        -- Save the ModIDs so we can remove them later
+        p5_mp_mod = Modify_PlayerResourceRate(p5, RT_Manpower, 0, MUT_Multiplication)
+        p5_mun_mod = Modify_PlayerResourceRate(p5, RT_Munition, 0, MUT_Multiplication)
+        p5_fuel_mod = Modify_PlayerResourceRate(p5, RT_Fuel, 0, MUT_Multiplication)
         
         Player_SetResource(p5, RT_Manpower, 1000)
         Player_SetResource(p5, RT_Munition, 100)
@@ -110,6 +116,12 @@ function DisableSpecificAbilities()
             local mortar_sbp = BP_GetSquadBlueprint("mortar_team_81mm_mp")
             if mortar_sbp ~= nil then
                 Player_SetSquadProductionAvailability(p, mortar_sbp, ITEM_REMOVED)
+            end
+
+            -- REMOVE PANZERSHRECK UPGRADE
+            local shreck_ubp = BP_GetUpgradeBlueprint("panzer_grenadier_panzershreck_atw_item_mp")
+            if shreck_ubp ~= nil then
+                Player_SetUpgradeAvailability(p, shreck_ubp, ITEM_REMOVED)
             end
         end
     end
@@ -295,9 +307,11 @@ end
 -- -----------------------------------------------------------------------------
 function StartDefensePhase()
     if p5 ~= nil then 
-        Modify_PlayerResourceRate(p5, RT_Manpower, 1.0, MUT_Multiplication)
-        Modify_PlayerResourceRate(p5, RT_Munition, 1.0, MUT_Multiplication)
-        Modify_PlayerResourceRate(p5, RT_Fuel, 1.0, MUT_Multiplication)
+        -- Destroy the 0x multipliers applied during OnInit() to restore normal base income
+        if p5_mp_mod ~= nil then Modifier_Remove(p5_mp_mod) end
+        if p5_mun_mod ~= nil then Modifier_Remove(p5_mun_mod) end
+        if p5_fuel_mod ~= nil then Modifier_Remove(p5_fuel_mod) end
+
         AI_Enable(p5, true) 
     end
     
