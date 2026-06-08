@@ -117,12 +117,6 @@ function DisableSpecificAbilities()
             if mortar_sbp ~= nil then
                 Player_SetSquadProductionAvailability(p, mortar_sbp, ITEM_REMOVED)
             end
-
-            -- REMOVE PANZERSHRECK UPGRADE
-            local shreck_ubp = BP_GetUpgradeBlueprint("panzer_grenadier_panzershreck_atw_item_mp")
-            if shreck_ubp ~= nil then
-                Player_SetUpgradeAvailability(p, shreck_ubp, ITEM_REMOVED)
-            end
         end
     end
 end
@@ -158,6 +152,8 @@ function SetupMissionObjectives()
         ID = "obj_defend_vp",
         Type = OT_Primary,
         Title = "$9729de9631714bf88ce09528f637a36e:2",
+		TitleEnd = "$9729de9631714bf88ce09528f637a36e:2",
+		TitleFail = "$9729de9631714bf88ce09528f637a36e:2",
         Description = LOC("Defend the bridge at all costs. Do not let the Axis recapture it!"),
         Visible = true,
     }
@@ -335,7 +331,6 @@ function StartDefensePhase()
     Rule_AddInterval(Rule_CheckDefenseTimer, 1)
     Rule_AddInterval(Rule_CheckSecondaryObjective, 1)
     
-    -- UPDATED: Dynamic randomization removed. First wave spawns in exactly 30 seconds.
     counterattack_delay = 30
     Rule_AddInterval(Rule_ManageCounterAttackTimer, 1)
 end
@@ -391,7 +386,6 @@ function Rule_ManageCounterAttackTimer()
     counterattack_delay = counterattack_delay - 1
     
     if counterattack_delay <= 0 then
-        -- UPDATED: Reset delay set strictly to 30 seconds for structured pressure.
         counterattack_delay = 30 
         
         local elapsed_seconds = 1200 - defend_seconds_left
@@ -450,11 +444,7 @@ function Rule_ManageCounterAttackTimer()
             if (chosen_route.id == "left" or chosen_route.id == "right") and german_counterattackup ~= nil then
                 table.insert(pathing_queue, Marker_GetPosition(german_counterattackup))
             end
-        else
-            spawn_pos = EGroup_GetPosition(eg_vp)
         end
-        
-        table.insert(pathing_queue, EGroup_GetPosition(eg_vp))
         
         counterattack_wave_id = counterattack_wave_id + 1
         local sg_wave = SGroup_CreateIfNotFound("sg_wave_" .. counterattack_wave_id)
