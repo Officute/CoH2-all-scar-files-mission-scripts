@@ -445,3 +445,12 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_heavysupport(nomercymod).scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_kv2arena(nomercymod).scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/vp_mainmode(nomercymod).scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_abilities.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_classic.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_lists.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_points.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_profiler.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_settings.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_survival.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/aod_survival_units.scar.lua
