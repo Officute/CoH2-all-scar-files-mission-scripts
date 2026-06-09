@@ -112,11 +112,6 @@ function DisableSpecificAbilities()
                     Player_SetAbilityAvailability(p, abp, ITEM_REMOVED)
                 end
             end
-            
-            local mortar_sbp = BP_GetSquadBlueprint("mortar_team_81mm_mp")
-            if mortar_sbp ~= nil then
-                Player_SetSquadProductionAvailability(p, mortar_sbp, ITEM_REMOVED)
-            end
         end
     end
 end
@@ -152,8 +147,8 @@ function SetupMissionObjectives()
         ID = "obj_defend_vp",
         Type = OT_Primary,
         Title = "$9729de9631714bf88ce09528f637a36e:2",
-		TitleEnd = "$9729de9631714bf88ce09528f637a36e:2",
-		TitleFail = "$9729de9631714bf88ce09528f637a36e:2",
+        TitleEnd = "$9729de9631714bf88ce09528f637a36e:2",
+        TitleFail = "$9729de9631714bf88ce09528f637a36e:2",
         Description = LOC("Defend the bridge at all costs. Do not let the Axis recapture it!"),
         Visible = true,
     }
