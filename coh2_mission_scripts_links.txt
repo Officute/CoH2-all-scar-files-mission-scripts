@@ -5,6 +5,7 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 
 = Custom Script by AI =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/LoD%20(2)%20Defend%20%26%20Attack.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/LoD_Berlin.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/pegasus.scar.lua
 
 = Data =
