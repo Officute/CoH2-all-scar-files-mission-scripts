@@ -396,6 +396,9 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/urban%20thunder.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/zero%20front%20war.scar.lua
 
+= Custom Mission by BigLake =
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/4p_coop_assault_at_dawn.lua
+
 = Custom Win Conditions .scar =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/anger.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/artysiege.scar.lua
