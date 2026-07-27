@@ -142,7 +142,7 @@ end
 
 function Mission_InitSecondaryObjectives()
     Rule_AddOneShot(SecondaryObjective_ExpandMap, 299)
-    Rule_AddOneShot(Evaluate_FiveMinuteCondition, 300)
+    Rule_AddOneShot(Evaluate_FiveMinuteCondition, 298)
 end
 
 function SecondaryObjective_ExpandMap()
@@ -192,7 +192,7 @@ function RadioObjective_Start()
         Objective_Start(obj_capture_radio, true)
 
         Objective_AddUIElements(obj_capture_radio, eg, "capture", obj_capture_radio.Title)
-        Rule_AddInterval(Check_RadioCaptureStatus, 1)
+        Rule_AddInterval(Check_RadioCaptureStatus, 0,125)
     end
 end
 
@@ -214,8 +214,9 @@ function Check_RadioCaptureStatus()
                     if owner == p1 or owner == p2 then
                         is_radio_captured = true 
                         
+                        -- Complete the objective and clear its minimap/UI icons
                         Objective_Complete(obj_capture_radio)
-                        Rule_AddOneShot(Display_MinimapReminderMessage, 10)
+                        Objective_RemoveUIElements(obj_capture_radio)
                         
                         if not Rule_Exists(Delete_SpawnerEntitiesLoop) then
                             Rule_AddInterval(Delete_SpawnerEntitiesLoop, 1)
@@ -228,12 +229,6 @@ function Check_RadioCaptureStatus()
             end
         end
     end
-end
-
-function Display_MinimapReminderMessage()
-    pcall(function()
-        Util_MissionTitle("$77838f451547402c99620752cd8e4aaa:6", 1.0, 5.0)
-    end)
 end
 
 function Delete_SpawnerEntitiesLoop()
@@ -391,6 +386,6 @@ end
 ----------------------------------------------------------------------------------------
 
 Scar_AddInit(function()
-    Rule_AddOneShot(Mission_Start, 420)
-    Rule_AddOneShot(Mission_InitSecondaryObjectives, 1)
+    Rule_AddOneShot(Mission_Start, 299)
+    Rule_AddOneShot(Mission_InitSecondaryObjectives, 0,1)
 end)
