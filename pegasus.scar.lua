@@ -19,11 +19,13 @@ p5_mun_mod = nil
 p5_fuel_mod = nil
 
 -- -----------------------------------------------------------------------------
--- Compatibility Layer for Custom Maps
+-- Localization Helper Function
 -- -----------------------------------------------------------------------------
 
-function LOC(text)
-    return text
+function Util_CreateLocString(text)
+	local tmpstr = LOC(text)
+	tmpstr[1] = text
+	return tmpstr
 end
 
 -- -----------------------------------------------------------------------------
@@ -138,7 +140,7 @@ function SetupMissionObjectives()
         ID = "obj_capture_vp",
         Type = OT_Primary,
         Title = "$9729de9631714bf88ce09528f637a36e:1",
-        Description = LOC("Secure the vital bridge before German reinforcements dig in."),
+        Description = Util_CreateLocString("Secure the vital bridge before German reinforcements dig in."),
         Visible = true,
     }
     Objective_Register(obj_capture_vp)
@@ -149,7 +151,7 @@ function SetupMissionObjectives()
         Title = "$9729de9631714bf88ce09528f637a36e:2",
         TitleEnd = "$9729de9631714bf88ce09528f637a36e:2",
         TitleFail = "$9729de9631714bf88ce09528f637a36e:2",
-        Description = LOC("Defend the bridge at all costs. Do not let the Axis recapture it!"),
+        Description = Util_CreateLocString("Defend the bridge at all costs. Do not let the Axis recapture it!"),
         Visible = true,
     }
     Objective_Register(obj_defend_vp)
@@ -158,7 +160,7 @@ function SetupMissionObjectives()
         ID = "obj_destroy_base",
         Type = OT_Secondary,
         Title = "$9729de9631714bf88ce09528f637a36e:3",
-        Description = LOC("Locate and destroy the German HQ to weaken regional counter-attacks."),
+        Description = Util_CreateLocString("Locate and destroy the German HQ to weaken regional counter-attacks."),
         Visible = true,
     }
     Objective_Register(obj_destroy_base)
@@ -351,7 +353,7 @@ function Rule_UpdateTimerUI()
     end
     
     local clock_string = "Hold the Pegasus Bridge (" .. tostring(minutes) .. ":" .. seconds_string .. ")"
-    Objective_UpdateText(obj_defend_vp, (clock_string), nil, false)
+    Objective_UpdateText(obj_defend_vp, Util_CreateLocString(clock_string), nil, false)
 end
 
 -- -----------------------------------------------------------------------------
@@ -496,7 +498,7 @@ function Rule_CheckDefenseTimer()
 end
 
 -- -----------------------------------------------------------------------------
--- Victory Reinforcements Spawning
+-- Victory Reinforcements Spawning (Fixed Invulnerable SGroup/Squad method)
 -- -----------------------------------------------------------------------------
 function Rule_SpawnCromwellReinforcements()
     if p3 == nil or mkr_brit_rein_end == nil or british_reinforcements_endgame == nil then return end
@@ -506,7 +508,13 @@ function Rule_SpawnCromwellReinforcements()
     local pos_reinforce = Marker_GetPosition(mkr_brit_rein_end)
     
     local squad = Squad_CreateAndSpawnToward(sbp_cromwell, p3, 0, pos_reinforce, pos_reinforce)
-    SGroup_Add(sg_reinforce, squad)
+    
+    if squad ~= nil then
+        SGroup_Add(sg_reinforce, squad)
+        -- SGroup level invulnerability prevents parameter errors completely
+        SGroup_SetInvulnerable(sg_reinforce, true)
+    end
+    
     Cmd_AttackMove(sg_reinforce, Marker_GetPosition(british_reinforcements_endgame)) 
     
     cromwell_spawn_count = cromwell_spawn_count + 1
