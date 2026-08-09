@@ -14,6 +14,8 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/set%20selectable%20disabled.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/state%20animator.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/animator%20event.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/set%20minimap%20invisible.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/set%20selectable%20invulnerable.scar.lua
 
 = Data =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/actor.scar.lua
