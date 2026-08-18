@@ -275,6 +275,7 @@ https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/4p_dockyard_warzone_main.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/4p_industrial_warzone.scar.lua
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/4p_some_warzone_03.scar.lua
+https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/8pvp_mides_canyon.scar.lua
 
 = .EVENTS Files =
 https://github.com/Officute/CoH2-all-scar-files-mission-scripts/blob/Scar-files/1941_crimea.events.lua
