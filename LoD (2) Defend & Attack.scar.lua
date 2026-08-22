@@ -176,7 +176,7 @@ function RadioObjective_Start()
         Objective_Start(obj_capture_radio, true)
 
         Objective_AddUIElements(obj_capture_radio, eg, "capture", obj_capture_radio.Title)
-        Rule_AddInterval(Check_RadioCaptureStatus, 0.125)
+        Rule_AddInterval(Check_RadioCaptureStatus, 0,125)
     end
 end
 
