@@ -60,22 +60,6 @@ local blueprints_to_delete = {
 }
 
 ----------------------------------------------------------------------------------------
--- SAFE UTILITY FUNCTIONS
-----------------------------------------------------------------------------------------
-
--- Safely fetches a marker position without risking a crash if the marker doesn't exist
-function Safe_GetMarkerPosition(marker_name)
-    local status, marker = pcall(Marker_FromName, marker_name)
-    if status and marker ~= nil then
-        local pos_status, pos = pcall(Marker_GetPosition, marker)
-        if pos_status then
-            return pos
-        end
-    end
-    return nil
-end
-
-----------------------------------------------------------------------------------------
 -- BRIDGE OBJECTIVES SEQUENCE
 ----------------------------------------------------------------------------------------
 
@@ -192,7 +176,7 @@ function RadioObjective_Start()
         Objective_Start(obj_capture_radio, true)
 
         Objective_AddUIElements(obj_capture_radio, eg, "capture", obj_capture_radio.Title)
-        Rule_AddInterval(Check_RadioCaptureStatus, 0,125)
+        Rule_AddInterval(Check_RadioCaptureStatus, 0.125)
     end
 end
 
