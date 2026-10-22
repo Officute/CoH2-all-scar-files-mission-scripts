@@ -11,16 +11,12 @@ function OnInit()
 
     -- 2. Make the 'noselect' group unselectable
     if EGroup_Exists("eg_noselect") then
-        -- SCAR usually requires disabling selection on a per-entity basis, 
-        -- so we loop through the EGroup and apply a helper function to each entity.
-        EGroup_ForEach(eg_noselect, DisableSelection)
+        -- EGroup_SetSelectable is the documented API for this. It internally
+        -- iterates the EGroup and applies the flag to every entity in it.
+        -- (There is no global 'Entity_SetSelectable' - that was the crash.)
+        EGroup_SetSelectable(eg_noselect, false)
     end
     
-end
-
--- Helper function that applies the "no select" rule to individual entities within the group
-function DisableSelection(groupID, itemIndex, entityID)
-    Entity_SetSelectable(entityID, false)
 end
 
 -- Registers the OnInit function to trigger when the map starts
