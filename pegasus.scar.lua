@@ -320,7 +320,7 @@ function StartDefensePhase()
         Objective_AddUIElements(obj_destroy_base, eg_german_hq, true, false)
     end
     
-    Game_LoadAtmosphere("DATA:/art/scenarios/presets/atmosphere/xp2/8p_essen_steelworks.aps", 1200)
+    Game_LoadAtmosphere("DATA:/art/scenarios/presets/atmosphere/_m01_stalingrad_rail_station.aps", 1200)
     
     Timer_Start("defend_timer", 1200) 
     
@@ -409,13 +409,11 @@ function Rule_ManageCounterAttackTimer()
             table.insert(wave_squads, "grenadier_squad_mp")
             table.insert(wave_squads, "kubelwagen_squad_mp")
             table.insert(wave_squads, "sdkfz_251_17_flak_halftrack_squad_mp")
-            table.insert(wave_squads, "infantry_250_halftrack_mp")
             
         else
             table.insert(wave_squads, "panzer_grenadier_squad_mp")
             table.insert(wave_squads, "panzer_grenadier_squad_mp")
             table.insert(wave_squads, "panzer_ii_luchs_squad_mp")
-            table.insert(wave_squads, "panzer_iv_squad_mp")
         end
         
         local routes = {}
